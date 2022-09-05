@@ -1,0 +1,64 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.persistencia\\MascotaFeliz.App.Persistencia.csproj": {}
+  },
+  "projects": {
+    "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.persistencia\\MascotaFeliz.App.Persistencia.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.persistencia\\MascotaFeliz.App.Persistencia.csproj",
+        "projectName": "MascotaFeliz.App.Persistencia",
+        "projectPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.persistencia\\MascotaFeliz.App.Persistencia.csproj",
+        "packagesPath": "C:\\Users\\juand\\.nuget\\packages\\",
+        "outputPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.persistencia\\obj\\",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "C:\\Users\\juand\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "netstandard2.1"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "netstandard2.1": {
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        }
+      },
+      "frameworks": {
+        "netstandard2.1": {
+          "dependencies": {
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[5.0.0, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "NETStandard.Library": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}
