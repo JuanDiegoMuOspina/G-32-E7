@@ -1,0 +1,324 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    text-decoration: none;
+}
+
+header {
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: #216583;
+}
+
+
+
+/*nav-bar*/
+.logo {
+    height: 80px;
+}
+
+.logo-img {
+
+    width: 250px;
+    margin: auto;
+    padding: 10px;
+
+}
+
+.navbar {
+    max-width: 1200px;
+    height: 80px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+}
+
+/*Bar menu*/
+.menu {
+    height: 80px;
+    padding: 0px 20px;
+    max-width: 1200px;
+
+}
+
+nav {
+    height: 100%;
+}
+
+nav>ul {
+    height: 100%;
+    display: flex;
+}
+
+nav ul li {
+    height: 100%;
+    list-style: none;
+    position: relative;
+}
+
+nav>ul>li>a {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    padding: 14px;
+    color: white;
+    font-weight: 400;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav>ul>li:first-child>a {
+    background-image: url(../Imagenes/Inicio.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 40px;
+
+
+}
+
+nav>ul>li:first-child:hover>a {
+    background-image: url(../Imagenes/Inicio.png);
+    background-size: 48px;
+    background-repeat: no-repeat;
+    background-position: center;
+
+
+}
+
+nav>ul>li>a:hover {
+    transform: scale(1.1);
+    background: #E64848;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, .5);
+
+}
+
+#selected {
+    transform: scale(1.1);
+    background-color: #E64848;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, .5);
+}
+
+/*Submenu*/
+
+nav ul li ul {
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    background: #1CD6CE;
+    position: absolute;
+    top: 100px;
+    left: -5px;
+    padding: 14px 0px;
+    visibility: hidden;
+    opacity: 0;
+    box-shadow: 0px 0px 1px 0px rgba(0, 0, 0, .5);
+    z-index: 10;
+    transition: 300ms ease;
+}
+
+nav ul li:hover ul {
+    visibility: visible;
+    opacity: 1;
+    top: 80px;
+}
+
+nav ul li ul::before {
+    content: '';
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-bottom: 12px solid #1CD6CE;
+    position: absolute;
+    top: -12px;
+    left: 20px;
+}
+
+nav ul li ul li a {
+    display: block;
+    color: #293462;
+    font-weight: 400;
+    padding: 6px;
+    padding-left: 14px;
+    margin-top: 10px;
+    font-size: 14px;
+    text-transform: uppercase;
+    transition: all 300ms ease;
+}
+
+nav ul li ul li a:hover {
+    background: #E64848;
+    color: #293462;
+    font-weight: 400;
+    transform: scale(1.1);
+    padding-left: 30px;
+    font-size: 14px;
+    box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, .5);
+
+}
+
+/*formulario*/
+
+body {
+    min-height: 600px;
+    padding: 100px 0;
+    background-image: linear-gradient(to top, #a3bded 0%, #6991c7 100%);
+    background-color: #a3bded;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+.form-group {
+    margin: auto;
+    width: 90%;
+    background-image: linear-gradient(to left, rgba(255, 255, 255, 0.451), rgba(255, 255, 255, 0.36));
+    overflow: hidden;
+    padding: .7em;
+    border-radius: 1em;
+
+    display: grid;
+    grid-auto-rows: max-content;
+    grid-template-columns: repeat(auto-fit, minmax(310px, 1fr));
+    gap: .6em;
+    animation: mostrar 1.5s ease-in-out;
+
+}
+
+@keyframes mostrar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.form-fig {
+    overflow: hidden;
+    border-radius: 1em;
+    display: flex;
+    background-color: #D798F8;
+
+}
+
+.img-form {
+    width: 80%;
+    margin: auto;
+    max-width: 60vw;
+}
+
+.form-reg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5em;
+    padding: 3em .7em;
+    text-align: center;
+}
+
+.main-form {
+    display: grid;
+    justify-items: center;
+    gap: 1em;
+}
+
+.main-input {
+    width: 80%;
+    max-width: 500px;
+    outline: none;
+    border: none;
+    padding: 1em;
+}
+
+/*.
+
+
+    
+body {
+    margin-top: 80px;
+    width: 100%;
+
+}
+
+h1 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 200;
+    color: black;
+    text-align: center;
+}
+form {
+    box-sizing: border-box;
+    z-index: -1;
+    width: 100%;
+    background-image: url(../Imagenes/dogshappy.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 60px;
+    position: fixed;
+}
+
+.form-reg {
+
+    background: rgba(103, 203, 236, 0.8);
+    border-radius: 20px;
+    width: 300px;
+    height: 450px;
+    box-shadow: 0px 0px 10px 0px rgba(162, 36, 36, 0.5);
+    padding-left: 80px;
+    padding-right: 80px;
+    padding-top: 35px;
+    margin: auto;
+
+
+
+}
+
+.button {
+    width: 200px;
+    margin: auto;
+    display: flex;
+    padding-right: 50%;
+    flex-direction: column;
+
+}
+*/
+
+
+@media screen and (max-width:720px) {
+    .logo-img {
+
+        width: 200px;
+        margin: auto;
+        padding: 14px 0px;
+    }
+
+    nav>ul {
+        flex-direction: column;
+        background-color: #1CD6CE;
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 25%;
+        height: 230px;
+        transition: all 300ms ease;
+        z-index: 100;
+        opacity: 1;
+        visibility: visible;
+
+    }
+}

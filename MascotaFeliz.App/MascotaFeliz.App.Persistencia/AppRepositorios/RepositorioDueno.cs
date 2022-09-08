@@ -17,6 +17,7 @@ namespace MascotaFeliz.App.Persistencia
         /// Inyeccion de dependencias para indicar el contexto a utilizar
         /// </summary>
         /// <param name="appContext"></param>//
+        
         public RepositorioDueno(AppContext appContext)
         {
             _appContext = appContext;
@@ -81,4 +82,4 @@ namespace MascotaFeliz.App.Persistencia
             return duenoEncontrado;
         }     
     }
-}
+}   
