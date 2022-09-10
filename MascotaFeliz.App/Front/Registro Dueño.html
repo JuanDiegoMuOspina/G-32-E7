@@ -8,6 +8,8 @@
     <link rel="icon" href="imagenes/Logdoc.png" />
     <title>Registro Dueño</title>
     <link href="Css/Estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 </head>
 
 <body>
@@ -37,19 +39,49 @@
         </div>
 
     </header>
-    <form>
-        <label for="name">Nombre:</label><br>
-        <input type="text" id="name" name="name" value="John"><br>
-        <label for="lname">Apellidos:</label><br>
-        <input type="text" id="lname" name="lname" value="Doe"><br>
-        <label for="address">Direccion:</label><br>
-        <input type="text" id="address" name="address" value="calle sin sentido"><br>
-        <label for="phone">Telefono:</label><br>
-        <input type="text" id="phone" name="phone" value="3101234567"><br>
-        <label for="email">Correo</label><br>
-        <input type="text" id="email" name="email" value="sin@mail.com"><br><br>
-        <input type="submit" value="Registar Dueño">
-    </form>
+
+    <section class="form-group">
+        <figure class="form-fig">
+            <img class=" img-form" src="Imagenes/pets.png" alt="">
+        </figure>
+        <div class="form-reg">
+            <h2 class="title-form">Bienvenido!</h2>
+            <p class="paragraph">Registar Dueño</p>
+
+            <form class="main-form">
+                <input type="text" placeholder="Ingresar Id" class="main-input">
+                <input type="text" placeholder="Ingresar Nombre" class="main-input">
+                <input type="text" placeholder="Ingresar Apellidos" class="main-input">
+                <input type="text" placeholder="Ingresar Direccion" class="main-input">
+                <input type="text" placeholder="Ingresar Telefono" class="main-input">
+                <input type="text" placeholder="Ingresar Correo" class="main-input">
+
+                <input type="submit" value="Registrar" class="main-input--send">
+                <input type="submit" value="Consultar" class="main-input--send">
+                <input type="submit" value="Modificar" class="main-input--send">
+                <input type="submit" value="Eliminar" class="main-input--del">
+            </form>
+        </div>
+    </section>
+
+
+    <div class="footer">
+        <div class="social">
+            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/JuanDiegoMuOspina/G-32-E7"><i class="fab fa-github"></i></a>
+        </div>
+        <ul class="listfoot">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="Quien somos.html">Nosotros</a></li>
+            <li><a href="#">Terminos</a></li>
+        </ul>
+        <p class="copry">
+            Sevensoft <i class="fa-sharp fa-solid fa-copyright"></i> 2022
+
+        </p>
+    </div>
 </body>
 
 </html>
