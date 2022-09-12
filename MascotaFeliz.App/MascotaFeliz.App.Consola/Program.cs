@@ -17,12 +17,12 @@ namespace MascotaFeliz.App.Consola
         static void Main(string[] args)
         {
             Console.WriteLine("Trabajando en las Tablas");
-            //AddDueno();
-            //AddVeterinario();
-            //AddMascota();
-            //BuscarDueno(1);
-            //BuscarMascota(2);
-            //ListaDueno();
+            AddDueno();
+            AddVeterinario();
+            AddMascota();
+            BuscarDueno(1);
+            BuscarMascota(2);
+            ListaDueno();
             //
             ListaMascota();
             
