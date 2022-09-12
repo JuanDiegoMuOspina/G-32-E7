@@ -1,0 +1,18 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.ListaVeterinarioModel
+@{
+}
+
+
+<h1>ListaDuenos</h1>
+<table class="" >
+    @foreach (var veterinario in Model.listaVeterinario)
+    {
+        <tr>
+            <td>@veterinario.Nombres</td>
+            
+
+        </tr>
+    
+    }
+</table>
