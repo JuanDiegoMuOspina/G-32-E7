@@ -12,9 +12,14 @@ namespace MascotaFeliz.App.Frontend.Pages
 {
     public class ListaVeterinarioModel : PageModel
     {
-        private static IRepositorioVeterinario _repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
+        private readonly  IRepositorioVeterinario _repoVeterinario;
 
         public IEnumerable<Veterinario> listaVeterinario { get;  set; }
+
+        public ListaVeterinarioModel()
+        {
+            this._repoVeterinario = new RepositorioVeterinario(new Persistencia.AppContext());
+        }
 
         public void OnGet()
         {

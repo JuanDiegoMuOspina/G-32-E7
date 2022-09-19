@@ -13,8 +13,15 @@
             <td>@dueno.Direccion</td>
             <td>@dueno.Telefono</td>
             <td>@dueno.Correo</td>
+            <td>
+                <a class="btn  btn-primary table-btn" asp-page=".\DetalleDuenos" asp-route-duenoId="@dueno.Id" >Detalle Dueno</a>
+            </td>
+            <td>
+                <a class="btn  btn-primary table-btn" asp-page=".\EditarDuenos" asp-route-duenoId="@dueno.Id" >Editar  Dueno</a>
+            </td>
 
         </tr>
     
     }
 </table>
+<a class="btn  btn-primary table-btn" asp-page=".\EditarDuenos" >Agregar Dueño Nuevo</a>

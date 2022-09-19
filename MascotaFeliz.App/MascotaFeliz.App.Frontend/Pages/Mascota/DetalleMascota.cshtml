@@ -1,0 +1,19 @@
+﻿@page
+@model MascotaFeliz.App.Frontend.Pages.DetalleMascotaModel
+@{
+}
+<h1>Detalle Mascota</h1>
+<div>
+    ID: @Model.mascota.Id
+</div>
+<div>
+    Cedula: @Model.mascota.Nombre
+</div>
+<div>
+    Nombre: @Model.mascota.Color
+</div>
+<div>
+    Apellidos: @Model.mascota.Especie
+</div>
+
+<a class="btn  btn-primary table-btn" asp-page="/Mascota/ListaMascota" asp-route-duenoId="" >volver</a>

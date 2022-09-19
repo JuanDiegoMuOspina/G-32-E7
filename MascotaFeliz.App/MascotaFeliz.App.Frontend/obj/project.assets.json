@@ -5743,11 +5743,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\MascotaFeliz.App.Frontend.csproj",
+      "projectUniqueName": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.frontend\\MascotaFeliz.App.Frontend.csproj",
       "projectName": "MascotaFeliz.App.Frontend",
-      "projectPath": "C:\\mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\MascotaFeliz.App.Frontend.csproj",
+      "projectPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.frontend\\MascotaFeliz.App.Frontend.csproj",
       "packagesPath": "C:\\Users\\juand\\.nuget\\packages\\",
-      "outputPath": "C:\\mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Frontend\\obj\\",
+      "outputPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.frontend\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juand\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5796,7 +5796,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.423\\RuntimeIdentifierGraph.json"
       }
     }
   }
