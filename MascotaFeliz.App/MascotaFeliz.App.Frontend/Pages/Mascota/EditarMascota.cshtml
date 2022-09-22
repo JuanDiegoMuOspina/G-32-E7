@@ -1,4 +1,39 @@
 ﻿@page
 @model MascotaFeliz.App.Frontend.Pages.EditarMascotaModel
 @{
+    int MascotaId = Model.mascota.Id;
 }
+<h1>Edicion de Mascota @MascotaId</h1>
+
+<form method="post">
+    <div>
+        <table>
+            <tr>
+                <td> <input type="hidden" asp-for="mascota.Id" /></td>
+                <td> <label asp-for="mascota.Nombre"></label>
+                    <input asp-for="mascota.Nombre">
+                </td>
+                <td> <label asp-for="mascota.Color"></label>
+                    <input asp-for="mascota.Color"></td>
+                <td> <label asp-for="mascota.Especie"></label>
+                    <input asp-for="mascota.Especie">
+                </td>
+                <td><label asp-for="mascota.Raza"></label>
+                    <input asp-for="mascota.Raza">
+                </td>
+               
+            </tr>
+        </table>
+
+
+
+
+
+
+
+
+        <button type="submit" class="btn  btn-primary table-btn" >Enviar formulario</button>
+
+    </div>
+
+</form>

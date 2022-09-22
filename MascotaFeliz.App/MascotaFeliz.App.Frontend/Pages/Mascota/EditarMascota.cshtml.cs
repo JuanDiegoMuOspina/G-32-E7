@@ -38,6 +38,20 @@ namespace MascotaFeliz.App.Frontend.Pages
             
         }
 
+         public IActionResult OnPost ()
+        {
+            if (!ModelState.IsValid){
+                return Page();
+            }
+            if(mascota.Id>0){
+                mascota= _repoMascotas.UpdateMascota(mascota);
+            }
+            else{
+                _repoMascotas.AddMascota(mascota);
+            }
+            return Page();
+        }
+
        
     }
 }
