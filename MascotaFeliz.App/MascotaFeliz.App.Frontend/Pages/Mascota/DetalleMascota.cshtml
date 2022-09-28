@@ -15,5 +15,20 @@
 <div>
     Apellidos: @Model.mascota.Especie
 </div>
+<div>
+    Nombre del veterinario: @Model.mascota.Veterinario.Nombres
+</div>
+<div>
+    Nombre del Dueño: @Model.mascota.Dueno.Nombres
+</div>
 
-<a class="btn  btn-primary table-btn" asp-page="/Mascota/ListaMascota" asp-route-duenoId="" >volver</a>
+<div>
+   En esta sección se encuentran las visitas de la mascota de la Historia clinica @Model.mascota.Historia.Id
+   <br/>
+    @Model.mascota.Nombre
+    <br/>
+    @Model.mascota.Historia.FechaInicial
+</div>
+
+<a class="btn  btn-primary table-btn" asp-page="/Mascota/ListaMascota" asp-route-duenoId="">volver</a>
+<a class="btn  btn-primary table-btn" asp-page="/VisitaPyP/AgregarVisita" asp-route-visitaId="">Agregar Visita</a>

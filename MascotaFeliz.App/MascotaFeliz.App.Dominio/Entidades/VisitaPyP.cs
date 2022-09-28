@@ -13,5 +13,6 @@ namespace MascotaFeliz.App.Dominio
         public int IdVeterinario {get;set;}
         public string Recomendaciones {get;set;}
         
+        
     }
 }

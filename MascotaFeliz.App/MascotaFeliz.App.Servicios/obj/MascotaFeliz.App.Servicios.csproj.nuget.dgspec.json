@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj": {}
+    "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj": {}
   },
   "projects": {
-    "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj": {
+    "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj",
+        "projectUniqueName": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj",
         "projectName": "MascotaFeliz.App.Servicios",
-        "projectPath": "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj",
+        "projectPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.servicios\\MascotaFeliz.App.Servicios.csproj",
         "packagesPath": "C:\\Users\\juand\\.nuget\\packages\\",
-        "outputPath": "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.servicios\\obj\\",
+        "outputPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.servicios\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\juand\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -53,7 +53,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.423\\RuntimeIdentifierGraph.json"
         }
       }
     }
