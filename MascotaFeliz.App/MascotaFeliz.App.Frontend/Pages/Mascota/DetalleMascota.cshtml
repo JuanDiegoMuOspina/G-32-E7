@@ -23,11 +23,57 @@
 </div>
 
 <div>
-   En esta sección se encuentran las visitas de la mascota de la Historia clinica @Model.mascota.Historia.Id
-   <br/>
+    En esta sección se encuentran las visitas de la mascota de la Historia clinica @Model.mascota.Historia.Id
+    <br />
     @Model.mascota.Nombre
-    <br/>
+    <br />
     @Model.mascota.Historia.FechaInicial
+</div>
+
+<div>
+    @foreach (var visitas in Model.listaVisitaPyP)
+    {
+        <table>
+            <tr>
+                <td>El Id de la visita es @visitas.Id</td>
+            </tr>
+            <tr>
+                <td>La fecha de la visita es @visitas.FechaVisita</td>
+            </tr>
+            <tr>
+                <td>La temperatura del animal es :@visitas.Temperatura</td>
+            </tr>
+            <tr>
+                <td>Peso :@visitas.Peso</td>
+            </tr>
+            <tr>
+                <td>FrecuenciaRespiratoria : @visitas.FrecuenciaRespiratoria</td>
+            </tr>
+            <tr>
+                <td>FrecuenciaCardiaca : @visitas.FrecuenciaCardiaca</td>
+            </tr>
+            <tr>
+                <td>EstadoAnimo : @visitas.EstadoAnimo</td>
+            </tr>
+            <tr>
+                <td>IdVeterinario @visitas.IdVeterinario </td>
+            </tr>
+            <tr>
+                <td>Recomendaciones : @visitas.Recomendaciones</td>
+            </tr>
+            <tr>
+                <td>
+                    <a class="btn  btn-primary table-btn" asp-page="/VisitaPyP/AgregarVisita"
+                    asp-route-visita="@visitas.Id">editar</a>
+                </td>
+                <td>
+                    <a class="btn  btn-primary table-btn" asp-page="/VisitaPyP/DeleteVisita"
+                    asp-route-visita="@visitas.Id">borrar</a>
+                </td>
+
+            </tr>
+        </table>
+    }
 </div>
 
 <a class="btn  btn-primary table-btn" asp-page="/Mascota/ListaMascota" asp-route-duenoId="">volver</a>

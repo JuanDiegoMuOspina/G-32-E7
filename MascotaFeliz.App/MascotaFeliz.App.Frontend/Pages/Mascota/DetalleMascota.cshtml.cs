@@ -16,7 +16,7 @@ namespace MascotaFeliz.App.Frontend.Pages
         private readonly IRepositorioVisitaPyP _repoVisitaPyP;
         private readonly IRepositorioHistoria _repoHistoria;
 
-        public  IEnumerable<VisitaPyP> listaVisitaPyP { get;  set; }
+        public IEnumerable<VisitaPyP> listaVisitaPyP {get;set;}
         public  Mascota mascota { get;  set; }
      
         
@@ -33,7 +33,15 @@ namespace MascotaFeliz.App.Frontend.Pages
         public IActionResult OnGet(int mascotaId)
         {
             mascota=_repoMascotas.GetMascota(mascotaId);
-            listaVisitaPyP =mascota.Historia.VisitasPyP;
+            if(_repoHistoria.GetVisitasHistoria(mascota.Historia.Id)==null)
+            {
+                listaVisitaPyP=new List<VisitaPyP>{};
+                Console.WriteLine(mascota.Historia.Id+" SIGUE EN NULL");
+            }else
+            {
+               listaVisitaPyP =_repoHistoria.GetVisitasHistoria(mascota.Historia.Id); 
+            }
+            
             
             
 

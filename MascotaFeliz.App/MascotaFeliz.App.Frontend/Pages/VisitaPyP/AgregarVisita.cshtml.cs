@@ -18,6 +18,8 @@ namespace MascotaFeliz.App.Frontend.Pages
         [BindProperty]
 
         public VisitaPyP VisitaPyP { get; set;}
+        public List<VisitaPyP> ListaVisitasPyP {get;set;}
+        public  IEnumerable<Historia> listaHistoria { get;  set; }
         public Historia Historia { get; set; }
 
         public  AgregarVisitaModel()
@@ -30,7 +32,7 @@ namespace MascotaFeliz.App.Frontend.Pages
         
          public IActionResult OnGet (int? visita)
         {
-            //Historia=_repoHistoria.GetHistoria(historiaId);
+            listaHistoria=_repoHistoria.GetAllHistorias();
             
             
             
@@ -51,10 +53,13 @@ namespace MascotaFeliz.App.Frontend.Pages
 
           public IActionResult OnPost(VisitaPyP VisitaPyP, int historiaId)
         {
-            if (ModelState.IsValid)
+          if (ModelState.IsValid)
             {
                 Historia=_repoHistoria.GetHistoria(historiaId);
-                Console.WriteLine(Historia.Id);
+               
+                
+                Console.WriteLine(historiaId+" sE SUPONE QUE SOLO AGREGAR ACÁ"+VisitaPyP.Temperatura);
+                
 
                 if (VisitaPyP.Id > 0)
                 {
@@ -65,8 +70,12 @@ namespace MascotaFeliz.App.Frontend.Pages
                 }
                 else
                 {
+                    FechaInicial = new DateTime(2020, 01, 01);
+                    //VisitaPyP.Historia=Historia;
+                    VisitaPyP.FechaVisita=FechaInicial;
                     VisitaPyP = _repoVisitaPyP.AddVisitaPyP(VisitaPyP);
-                    Historia.VisitasPyP.Append(VisitaPyP);
+                    
+                    Historia.VisitasPyP.Add(VisitaPyP);
                     
                     _repoHistoria.UpdateHistoria(Historia);
                     

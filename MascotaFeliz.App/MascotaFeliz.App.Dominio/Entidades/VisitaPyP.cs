@@ -12,6 +12,7 @@ namespace MascotaFeliz.App.Dominio
         public string EstadoAnimo {get;set;}
         public int IdVeterinario {get;set;}
         public string Recomendaciones {get;set;}
+        public Historia Historia {get;set;}
         
         
     }

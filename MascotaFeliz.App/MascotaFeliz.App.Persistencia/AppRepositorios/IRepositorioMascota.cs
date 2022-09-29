@@ -12,7 +12,7 @@ namespace MascotaFeliz.App.Persistencia
         Mascota AddMascota(Mascota mascota);
         Mascota UpdateMascota(Mascota mascota);
         Mascota AsignarNuevoVeterinario(int mascota, int veterinario);
-        //void DeleteMascota(int idMascota);
+        void DeleteMascota(int idMascota);
         Mascota GetMascota(int idMascota);
         IEnumerable<Mascota> GetMascotasPorFiltro(string filtro);
         Dueno AsignarDueno(int idMascota, int idDueno);

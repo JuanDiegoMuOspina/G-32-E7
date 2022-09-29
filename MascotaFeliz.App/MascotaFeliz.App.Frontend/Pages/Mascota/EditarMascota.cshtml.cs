@@ -69,8 +69,9 @@ namespace MascotaFeliz.App.Frontend.Pages
 
 
                 };
-
-
+                List<VisitaPyP> listaVisitaPyP;
+                listaVisitaPyP=new List<VisitaPyP>{};
+                historia.VisitasPyP=listaVisitaPyP;
                 historia = _repoHistoria.AddHistoria(historia);
                 if (mascota.Id > 0)
                 {

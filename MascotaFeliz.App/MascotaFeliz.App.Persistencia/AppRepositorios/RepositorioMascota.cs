@@ -29,7 +29,7 @@ namespace MascotaFeliz.App.Persistencia
             _appContext.SaveChanges();
             return mascotaAdicionada.Entity;
         }
-        /*
+        
         public void DeleteMascota(int idMascota)
         {
             var mascotaEncontrada = _appContext.Mascotas.FirstOrDefault(d => d.Id == idMascota);
@@ -37,7 +37,7 @@ namespace MascotaFeliz.App.Persistencia
                 return;
             _appContext.Mascotas.Remove(mascotaEncontrada);
             _appContext.SaveChanges();
-        }*/
+        }
         
        public IEnumerable<Mascota> GetAllMascotas()
         {

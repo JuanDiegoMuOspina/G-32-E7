@@ -5802,11 +5802,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.consola\\MascotaFeliz.App.Consola.csproj",
+      "projectUniqueName": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.consola\\MascotaFeliz.App.Consola.csproj",
       "projectName": "MascotaFeliz.App.Consola",
-      "projectPath": "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.consola\\MascotaFeliz.App.Consola.csproj",
+      "projectPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.consola\\MascotaFeliz.App.Consola.csproj",
       "packagesPath": "C:\\Users\\juand\\.nuget\\packages\\",
-      "outputPath": "C:\\mascotas\\mascotafeliz.app\\mascotafeliz.app.consola\\obj\\",
+      "outputPath": "C:\\mascotas\\MascotaFeliz.App\\mascotafeliz.app.consola\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\juand\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5820,11 +5820,11 @@
       "frameworks": {
         "netcoreapp3.1": {
           "projectReferences": {
-            "C:\\mascotas\\mascotafeliz.app\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
-              "projectPath": "C:\\mascotas\\mascotafeliz.app\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
+            "C:\\mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj": {
+              "projectPath": "C:\\mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Dominio\\MascotaFeliz.App.Dominio.csproj"
             },
-            "C:\\mascotas\\mascotafeliz.app\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
-              "projectPath": "C:\\mascotas\\mascotafeliz.app\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
+            "C:\\mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj": {
+              "projectPath": "C:\\mascotas\\MascotaFeliz.App\\MascotaFeliz.App.Persistencia\\MascotaFeliz.App.Persistencia.csproj"
             }
           }
         }
@@ -5860,7 +5860,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.422\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.423\\RuntimeIdentifierGraph.json"
       }
     }
   }

@@ -89,3 +89,7 @@ C:\mascotas\MascotaFeliz.App\mascotafeliz.app.frontend\obj\Debug\netcoreapp3.1\R
 C:\mascotas\MascotaFeliz.App\mascotafeliz.app.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinario\EditarVeterinario.cshtml.g.cs
 C:\mascotas\MascotaFeliz.App\mascotafeliz.app.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascota\EditarMascota.cshtml.g.cs
 C:\mascotas\MascotaFeliz.App\mascotafeliz.app.frontend\obj\Debug\netcoreapp3.1\Razor\Pages\VisitaPyP\AgregarVisita.cshtml.g.cs
+C:\mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\VisitaPyP\DeleteVisita.cshtml.g.cs
+C:\mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Duenos\DeleteDueno.cshtml.g.cs
+C:\mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Veterinario\DeleteVeterinario.cshtml.g.cs
+C:\mascotas\MascotaFeliz.App\MascotaFeliz.App.Frontend\obj\Debug\netcoreapp3.1\Razor\Pages\Mascota\DeleteMascota.cshtml.g.cs
