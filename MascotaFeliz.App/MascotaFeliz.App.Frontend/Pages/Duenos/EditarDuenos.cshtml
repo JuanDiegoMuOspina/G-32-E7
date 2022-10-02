@@ -3,42 +3,60 @@
 @{
     int duenoId = Model.dueno.Id;
 }
-<h1>Edicion de duenos</h1>
 
-<form method="post">
+
+@* <h1>Edicion de duenos</h1>
+
+    <form method="post">
     <div>
-        <table>
-            <tr>
-                <td> <input type="hidden" asp-for="dueno.Id" /></td>
-                <td> <label asp-for="dueno.Nombres"></label>
-                    <input asp-for="dueno.Nombres">
-                </td>
-                <td> <label asp-for="dueno.Nombres"></label>
-                    <input asp-for="dueno.Nombres"></td>
-                <td> <label asp-for="dueno.Apellidos"></label>
-                    <input asp-for="dueno.Apellidos">
-                </td>
-                <td><label asp-for="dueno.Direccion"></label>
-                    <input asp-for="dueno.Direccion">
-                </td>
-                <td> <label asp-for="dueno.Telefono"></label>
-                    <input asp-for="dueno.Telefono">
-                </td>
-                <td> <label asp-for="dueno.Correo"></label>
-                    <input asp-for="dueno.Correo">
-                </td>
-            </tr>
-        </table>
+    <table>
+    <tr>
+    <td> <input type="hidden" asp-for="dueno.Id" /></td>
+    <td> <label asp-for="dueno.Nombres"></label>
+    <input asp-for="dueno.Nombres">
+    </td>
+    <td> <label asp-for="dueno.Nombres"></label>
+    <input asp-for="dueno.Nombres">
+    </td>
+    <td> <label asp-for="dueno.Apellidos"></label>
+    <input asp-for="dueno.Apellidos">
+    </td>
+    <td><label asp-for="dueno.Direccion"></label>
+    <input asp-for="dueno.Direccion">
+    </td>
+    <td> <label asp-for="dueno.Telefono"></label>
+    <input asp-for="dueno.Telefono">
+    </td>
+    <td> <label asp-for="dueno.Correo"></label>
+    <input asp-for="dueno.Correo">
+    </td>
+    </tr>
+    </table>
 
-
-
-
-
-
-
-
-        <button type="submit" class="btn  btn-primary table-btn" >Enviar formulario</button>
+    <button type="submit" class="btn btn-primary table-btn">Enviar formulario</button>
 
     </div>
 
-</form>
+    </form> *@
+
+
+<section class="form-group">
+    <figure class="form-fig">
+        <img class=" img-form" src="~/Archivo/Imagenes/pets.png" alt="Mascota">
+    </figure>
+    <div class="form-reg">
+        <h2 class="title-form">Bienvenido!</h2>
+        <p class="paragraph">Registar Dueño</p>
+
+        <form method="post" class="main-form">
+            <input type="hidden" asp-for="dueno.Id" />
+            <input type="text" placeholder="Ingresar Nombre" class="main-input" asp-for="dueno.Nombres">
+            <input type="text" placeholder="Ingresar Apellidos" class="main-input" asp-for="dueno.Apellidos">
+            <input type="text" placeholder="Ingresar Direccion" class="main-input" asp-for="dueno.Direccion">
+            <input type="text" placeholder="Ingresar Telefono" class="main-input" asp-for="dueno.Telefono">
+            <input type="text" placeholder="Ingresar Correo" class="main-input" asp-for="dueno.Correo">
+
+            <button type="submit" class="main-input--send">Enviar Formulario</button>
+        </form>
+    </div>
+</section>

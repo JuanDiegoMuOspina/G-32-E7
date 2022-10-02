@@ -3,28 +3,44 @@
 @{
 }
 
-<h1>ListaDuenos</h1>
-<table class="" >
-    @foreach (var dueno in Model.listaDuenos)
-    {
-        <tr>
-            <td>@dueno.Nombres</td>
-            <td>@dueno.Apellidos</td>
-            <td>@dueno.Direccion</td>
-            <td>@dueno.Telefono</td>
-            <td>@dueno.Correo</td>
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\DetalleDuenos" asp-route-duenoId="@dueno.Id" >Detalle Dueno</a>
-            </td>
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\EditarDuenos" asp-route-duenoId="@dueno.Id" >Editar  Dueno</a>
-            </td>
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\DeleteDueno" asp-route-duenoId="@dueno.Id" >Eliminar  Dueno</a>
-            </td>
 
-        </tr>
-    
-    }
-</table>
-<a class="btn  btn-primary table-btn" asp-page=".\EditarDuenos" >Agregar Dueño Nuevo</a>
+<div class="table-container">
+    <a class="btn-new" asp-page=".\EditarDuenos">Agregar Nuevo Dueño</a>
+    <h1 class="heading">Lista Duenos</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Email</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var dueno in Model.listaDuenos)
+            {
+                <tr>
+                    <td data-label="Nombre">@dueno.Nombres</td>
+                    <td data-label="Apellido">@dueno.Apellidos</td>
+                    <td data-label="Direccion">@dueno.Direccion</td>
+                    <td data-label="Telefono">@dueno.Telefono</td>
+                    <td data-label="Email">@dueno.Correo</td>
+
+                    <td data-label-accion="Accion">
+                        <a class="btn" asp-page=".\DetalleDuenos" asp-route-duenoId="@dueno.Id">Detalle
+                        </a>
+                        <a class="btn" asp-page=".\EditarDuenos" asp-route-duenoId="@dueno.Id">Editar
+                        </a>
+                        <a class="btn-del" asp-page=".\DeleteDueno" asp-route-duenoId="@dueno.Id">Eliminar
+                        </a>
+                    </td>
+                </tr>
+
+            }
+    </table>
+    </tbody>
+
+</div>

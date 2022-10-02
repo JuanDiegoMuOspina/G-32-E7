@@ -2,31 +2,69 @@
 @model MascotaFeliz.App.Frontend.Pages.AgregarVisitaModel
 @{
 }
- <form class="main-form" method="post">
-                <input type="text" type="hidden" asp-for="VisitaPyP.Id"  placeholder="Ingresar Id" class="main-input">
-                
-                <input type="text" asp-for="VisitaPyP.Temperatura"  placeholder="Ingresar Temperatura" class="main-input">
-                <input type="text" asp-for="VisitaPyP.Peso"  placeholder="Ingresar Frecuencia Cardiaca" class="main-input">
-                <input type="text" asp-for="VisitaPyP.FrecuenciaRespiratoria"  placeholder="Ingresar Peso" class="main-input">
-                
-                <input type="text" asp-for="VisitaPyP.FrecuenciaCardiaca" placeholder="Ingresar Frecuencia Respiratoria" class="main-input">
-                
-                <input type="text" asp-for="VisitaPyP.EstadoAnimo"  placeholder="Ingresar Estado Animo" class="main-input">
+@* <form class="main-form" method="post">
+    <input type="text" type="hidden" asp-for="VisitaPyP.Id" placeholder="Ingresar Id" class="main-input">
+
+    <input type="text" asp-for="VisitaPyP.Temperatura" placeholder="Ingresar Temperatura" class="main-input">
+    <input type="text" asp-for="VisitaPyP.Peso" placeholder="Ingresar Frecuencia Cardiaca" class="main-input">
+    <input type="text" asp-for="VisitaPyP.FrecuenciaRespiratoria" placeholder="Ingresar Peso" class="main-input">
+
+    <input type="text" asp-for="VisitaPyP.FrecuenciaCardiaca" placeholder="Ingresar Frecuencia Respiratoria"
+    class="main-input">
+
+    <input type="text" asp-for="VisitaPyP.EstadoAnimo" placeholder="Ingresar Estado Animo" class="main-input">
 
 
-                <input type="text"  asp-for="VisitaPyP.IdVeterinario"  placeholder="Ingresar Id Veterinario" class="main-input">
-                <input type="text" asp-for="VisitaPyP.Recomendaciones"  placeholder="Ingresar Recomendaciones" class="main-input">
-                 <select name="historiaId">
+    <input type="text" asp-for="VisitaPyP.IdVeterinario" placeholder="Ingresar Id Veterinario" class="main-input">
+    <input type="text" asp-for="VisitaPyP.Recomendaciones" placeholder="Ingresar Recomendaciones" class="main-input">
+    <select name="historiaId">
 
-                           
-                            @foreach (var historia in Model.listaHistoria)
-                            {
-                                <option name="historiaId" value="@historia.Id">@historia.Id</option>
 
-                            }
+    @foreach (var historia in Model.listaHistoria)
+    {
+    <option name="historiaId" value="@historia.Id">@historia.Id</option>
 
-                        </select>
+    }
 
-                <button type="submit" class="btn  btn-primary table-btn" >Enviar formulario</button>
-            </form>
- 
+    </select>
+
+    <button type="submit" class="btn btn-primary table-btn">Enviar formulario</button>
+    </form>
+*@
+
+<section class="form-group">
+    <figure class="form-fig">
+        <img class=" img-form" src="~/Archivo/Imagenes/pets.png" alt="Mascota">
+    </figure>
+    <div class="form-reg">
+        <h2 class="title-form">Bienvenido!</h2>
+        <p class="paragraph">Registar Visita</p>
+
+        <form method="post" class="main-form">
+            <input type="hidden" asp-for="VisitaPyP.Id" />
+            <input type="text" placeholder="Ingresar Temperatura" class="main-input" asp-for="VisitaPyP.Temperatura">
+            <input type="text" placeholder="Ingresar Peso" class="main-input" asp-for="VisitaPyP.Peso">
+            <input type="text" placeholder="Ingresar F. Resporatoria" class="main-input"
+                asp-for="VisitaPyP.FrecuenciaRespiratoria">
+            <input type="text" placeholder="Ingresar F. Cardiaca" class="main-input"
+                asp-for="VisitaPyP.FrecuenciaCardiaca">
+            <input type="text" placeholder="Ingresar Estado Animo" class="main-input" asp-for="VisitaPyP.EstadoAnimo">
+
+            <input type="text" asp-for="VisitaPyP.IdVeterinario" placeholder="Ingresar Id Veterinario"
+                class="main-input">
+            <input type="text" placeholder="Ingresar Recomendaciones" class="main-input"
+                asp-for="VisitaPyP.Recomendaciones">
+
+            <select name="historiaId" class="main-input">
+                <option value="0">Seleccione un Id historia</option>
+                @foreach (var historia in Model.listaHistoria)
+                {
+                    <option name="historiaId" value="@historia.Id">@historia.Id</option>
+
+                }
+            </select>
+
+            <button type="submit" class="main-input--send">Enviar Formulario</button>
+        </form>
+    </div>
+</section>

@@ -4,30 +4,45 @@
 }
 
 
-<h1>Lista de veterinarios</h1>
-<table class="" >
-    @foreach (var veterinario in Model.listaVeterinario)
-    {
-        <tr>
-            <td>@veterinario.Id</td>
-            <td>@veterinario.Nombres</td>
-            <td>@veterinario.Apellidos</td>
-            <td>@veterinario.Direccion</td>
-            <td>@veterinario.Telefono</td>
-            <td>@veterinario.TarjetaProfesional</td>
-              <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\DetalleVeterinario" asp-route-veterinarioId="@veterinario.Id" >Detalle Veterinario</a>
-            </td>
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\EditarVeterinario" asp-route-veterinarioId="@veterinario.Id" >Editar  Veterinario</a>
-            </td>
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\DeleteVeterinario" asp-route-veterinarioId="@veterinario.Id" >Borrar  Veterinario</a>
-            </td>
-            
+<div class="table-container">
+    <a class="btn-new" asp-page=".\EditarVeterinario">Agregar Nuevo Veterinario</a>
+    <h1 class="heading">Lista Veterinario</h1>
 
-        </tr>
-    
-    }
-</table>
-<a class="btn  btn-primary table-btn" asp-page=".\EditarVeterinario">Agregar Veterionario</a>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Direccion</th>
+                <th>Telefono</th>
+                <th>Tarjta P</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var veterinario in Model.listaVeterinario)
+            {
+                <tr>
+                    <td data-label="Id">@veterinario.Id</td>
+                    <td data-label="Nombre">@veterinario.Nombres</td>
+                    <td data-label="Apellido">@veterinario.Apellidos</td>
+                    <td data-label="Direccion">@veterinario.Direccion</td>
+                    <td data-label="Telefono">@veterinario.Telefono</td>
+                    <td data-label="Tarjeta P">@veterinario.TarjetaProfesional</td>
+
+                    <td data-label-accion="Accion">
+                        <a class="btn" asp-page=".\DetalleVeterinario" asp-route-veterinarioId="@veterinario.Id">Detalle
+                        </a>
+                        <a class="btn" asp-page=".\EditarVeterinario" asp-route-veterinarioId="@veterinario.Id">Editar
+                        </a>
+                        <a class="btn-del" asp-page=".\DeleteVeterinario" asp-route-veterinarioId="@veterinario.Id">Eliminar
+                        </a>
+                    </td>
+                </tr>
+
+            }
+    </table>
+    </tbody>
+
+</div>

@@ -3,26 +3,110 @@
 @{
 }
 
-<h1>Detalle duenos</h1>
-<div>
+@* <h1>Detalle duenos</h1>
+    <div>
     ID: @Model.dueno.Id
-</div>
-<div>
-    Cedula: @Model.dueno.Nombres
-</div>
-<div>
+    </div>
+
+    <div>
     Nombre: @Model.dueno.Nombres
-</div>
-<div>
+    </div>
+    <div>
     Apellidos: @Model.dueno.Apellidos
-</div>
-<div>
+    </div>
+    <div>
     Direccion: @Model.dueno.Direccion
-</div>
-<div>
+    </div>
+    <div>
     Telefono: @Model.dueno.Telefono
     </div>
-<div>
+    <div>
     Correo: @Model.dueno.Correo
+    </div>
+    <a class="btn btn-primary table-btn" asp-page=".\ListaDuenos" asp-route-duenoId="">volver</a>
+
+*@
+@* <div class="card">
+
+    <div class="card_landing"
+    style="--i:url(https://images.unsplash.com/photo-1518717758536-85ae29035b6d?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80)">
+    <a class="btn-new" asp-page=".\ListaDuenos" asp-route-duenoId="">volver</a>
+    <h6>Detalle @Model.dueno.Nombres</h6>
+
+    </div>
+    <div class="card_info">
+    <p class="title2">Detalles</p>
+    <div class="description">
+    <div class="item">
+    <i class="fa-solid fa-dog"></i>
+    <p>Mascota Feliz</p>
+    </div>
+    <div class="item">
+    <i class="fa-solid fa-suitcase-medical"></i>
+    <p></p>
+    </div>
+    </div>
+
+    <div class="content">
+    <p class="title2">Detalles</p>
+    <ul class="list">
+    <li>ID: @Model.dueno.Id</li>
+    <li>Nombre: @Model.dueno.Nombres</li>
+    <li>Apellidos: @Model.dueno.Apellidos</li>
+    <li>Direccion: @Model.dueno.Direccion</li>
+    <li>Telefono: @Model.dueno.Telefono</li>
+    <li>Correo: @Model.dueno.Correo</li>
+    </ul>
+    </div>
+    <div class="action1">
+
+    </div>
+    </div>
+
+    </div> *@
+
+
+<div class="container1">
+    <div class="card">
+        <div class="titlecard">
+            <h1>Detalle @Model.dueno.Nombres</h1>
+            @* <h2>@Model.dueno.Nombres</h2> *@
+        </div>
+        <div class="content">
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                ID: @Model.dueno.Id
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Nombre: @Model.dueno.Nombres
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Apellidos: @Model.dueno.Apellidos
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Direccion: @Model.dueno.Direccion
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Telefono: @Model.dueno.Telefono
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Correo: @Model.dueno.Correo
+            </div>
+
+            <div class="volverbtn">
+                <a class="btn-new" asp-page=".\ListaDuenos" asp-route-duenoId="">volver</a>
+            </div>
+        </div>
+
+    </div>
 </div>
-<a class="btn  btn-primary table-btn" asp-page=".\ListaDuenos" asp-route-duenoId="" >volver</a>

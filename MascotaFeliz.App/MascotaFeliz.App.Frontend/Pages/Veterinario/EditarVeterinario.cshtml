@@ -3,42 +3,58 @@
 @{
     int veterinarioId = Model.veterinario.Id;
 }
-<h1>Edicion de Veterrinario @veterinarioId</h1>
+@* <h1>Edicion de Veterrinario @veterinarioId</h1>
 
-<form method="post">
+    <form method="post">
     <div>
-        <table>
-            <tr>
-                <td> <input type="hidden" asp-for="veterinario.Id" /> </td>
-                <td> <label asp-for="veterinario.Nombres"></label>
-                    <input asp-for="veterinario.Nombres">
-                </td>
-                
-                <td> <label asp-for="veterinario.Apellidos"></label>
-                    <input asp-for="veterinario.Apellidos">
-                </td>
-                <td><label asp-for="veterinario.Direccion"></label>
-                    <input asp-for="veterinario.Direccion">
-                </td>
-                <td> <label asp-for="veterinario.Telefono"></label>
-                    <input asp-for="veterinario.Telefono">
-                </td>
-                <td> <label asp-for="veterinario.TarjetaProfesional"></label>
-                    <input asp-for="veterinario.TarjetaProfesional">
-                </td>
-              
-            </tr>
-        </table>
+    <table>
+    <tr>
+    <td> <input type="hidden" asp-for="veterinario.Id" /> </td>
+    <td> <label asp-for="veterinario.Nombres"></label>
+    <input asp-for="veterinario.Nombres">
+    </td>
 
+    <td> <label asp-for="veterinario.Apellidos"></label>
+    <input asp-for="veterinario.Apellidos">
+    </td>
+    <td><label asp-for="veterinario.Direccion"></label>
+    <input asp-for="veterinario.Direccion">
+    </td>
+    <td> <label asp-for="veterinario.Telefono"></label>
+    <input asp-for="veterinario.Telefono">
+    </td>
+    <td> <label asp-for="veterinario.TarjetaProfesional"></label>
+    <input asp-for="veterinario.TarjetaProfesional">
+    </td>
 
+    </tr>
+    </table>
 
-
-
-
-
-
-        <button type="submit" class="btn  btn-primary table-btn" >Enviar formulario</button>
+    <button type="submit" class="btn btn-primary table-btn">Enviar formulario</button>
 
     </div>
 
-</form>
+    </form>
+*@
+
+<section class="form-group">
+    <figure class="form-fig">
+        <img class=" img-form" src="~/Archivo/Imagenes/pets.png" alt="Mascota">
+    </figure>
+    <div class="form-reg">
+        <h2 class="title-form">Bienvenido!</h2>
+        <p class="paragraph">Registar Veterinario</p>
+
+        <form method="post" class="main-form">
+            <input type="hidden" asp-for="veterinario.Id" />
+            <input type="text" placeholder="Ingresar Nombre" class="main-input" asp-for="veterinario.Nombres">
+            <input type="text" placeholder="Ingresar Apellidos" class="main-input" asp-for="veterinario.Apellidos">
+            <input type="text" placeholder="Ingresar Direccion" class="main-input" asp-for="veterinario.Direccion">
+            <input type="text" placeholder="Ingresar Telefono" class="main-input" asp-for="veterinario.Telefono">
+            <input type="text" placeholder="Ingresar Tarjeta Prof" class="main-input"
+                asp-for="veterinario.TarjetaProfesional">
+
+            <button type="submit" class="main-input--send">Enviar Formulario</button>
+        </form>
+    </div>
+</section>

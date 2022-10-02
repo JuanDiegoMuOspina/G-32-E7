@@ -2,79 +2,196 @@
 @model MascotaFeliz.App.Frontend.Pages.DetalleMascotaModel
 @{
 }
-<h1>Detalle Mascota</h1>
-<div>
+@* <h1>Detalle Mascota</h1>
+    <div>
     ID: @Model.mascota.Id
-</div>
-<div>
+    </div>
+    <div>
     Cedula: @Model.mascota.Nombre
-</div>
-<div>
+    </div>
+    <div>
     Nombre: @Model.mascota.Color
-</div>
-<div>
+    </div>
+    <div>
     Apellidos: @Model.mascota.Especie
-</div>
-<div>
+    </div>
+    <div>
     Nombre del veterinario: @Model.mascota.Veterinario.Nombres
-</div>
-<div>
+    </div>
+    <div>
     Nombre del Dueño: @Model.mascota.Dueno.Nombres
-</div>
+    </div>
 
-<div>
+    <div>
     En esta sección se encuentran las visitas de la mascota de la Historia clinica @Model.mascota.Historia.Id
     <br />
     @Model.mascota.Nombre
     <br />
     @Model.mascota.Historia.FechaInicial
-</div>
+    </div>
 
-<div>
+    <div>
     @foreach (var visitas in Model.listaVisitaPyP)
     {
-        <table>
-            <tr>
-                <td>El Id de la visita es @visitas.Id</td>
-            </tr>
-            <tr>
-                <td>La fecha de la visita es @visitas.FechaVisita</td>
-            </tr>
-            <tr>
-                <td>La temperatura del animal es :@visitas.Temperatura</td>
-            </tr>
-            <tr>
-                <td>Peso :@visitas.Peso</td>
-            </tr>
-            <tr>
-                <td>FrecuenciaRespiratoria : @visitas.FrecuenciaRespiratoria</td>
-            </tr>
-            <tr>
-                <td>FrecuenciaCardiaca : @visitas.FrecuenciaCardiaca</td>
-            </tr>
-            <tr>
-                <td>EstadoAnimo : @visitas.EstadoAnimo</td>
-            </tr>
-            <tr>
-                <td>IdVeterinario @visitas.IdVeterinario </td>
-            </tr>
-            <tr>
-                <td>Recomendaciones : @visitas.Recomendaciones</td>
-            </tr>
-            <tr>
-                <td>
-                    <a class="btn  btn-primary table-btn" asp-page="/VisitaPyP/AgregarVisita"
-                    asp-route-visita="@visitas.Id">editar</a>
-                </td>
-                <td>
-                    <a class="btn  btn-primary table-btn" asp-page="/VisitaPyP/DeleteVisita"
-                    asp-route-visita="@visitas.Id">borrar</a>
-                </td>
+    <table>
+    <tr>
+    <td>El Id de la visita es @visitas.Id</td>
+    </tr>
+    <tr>
+    <td>La fecha de la visita es @visitas.FechaVisita</td>
+    </tr>
+    <tr>
+    <td>La temperatura del animal es :@visitas.Temperatura</td>
+    </tr>
+    <tr>
+    <td>Peso :@visitas.Peso</td>
+    </tr>
+    <tr>
+    <td>FrecuenciaRespiratoria : @visitas.FrecuenciaRespiratoria</td>
+    </tr>
+    <tr>
+    <td>FrecuenciaCardiaca : @visitas.FrecuenciaCardiaca</td>
+    </tr>
+    <tr>
+    <td>EstadoAnimo : @visitas.EstadoAnimo</td>
+    </tr>
+    <tr>
+    <td>IdVeterinario @visitas.IdVeterinario </td>
+    </tr>
+    <tr>
+    <td>Recomendaciones : @visitas.Recomendaciones</td>
+    </tr>
+    <tr>
+    <td>
+    <a class="btn btn-primary table-btn" asp-page="/VisitaPyP/AgregarVisita"
+    asp-route-visita="@visitas.Id">editar</a>
+    </td>
+    <td>
+    <a class="btn btn-primary table-btn" asp-page="/VisitaPyP/DeleteVisita"
+    asp-route-visita="@visitas.Id">borrar</a>
+    </td>
 
-            </tr>
-        </table>
+    </tr>
+    </table>
     }
+    </div>
+
+    <a class="btn btn-primary table-btn" asp-page="/Mascota/ListaMascota" asp-route-duenoId="">volver</a>
+    <a class="btn btn-primary table-btn" asp-page="/VisitaPyP/AgregarVisita" asp-route-visitaId="">Agregar Visita</a>
+*@
+
+@* ---------------------------- *@
+
+<div class="container1">
+    <div class="card">
+        <div class="titlecard">
+            <h1>Detalle @Model.mascota.Nombre</h1>
+
+        </div>
+        <div class="content">
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                ID: @Model.mascota.Id
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Nombre: @Model.mascota.Nombre
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Color: @Model.mascota.Color
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Especie: @Model.mascota.Especie
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Nombre del veterinario: @Model.mascota.Veterinario.Nombres
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                Nombre del Dueño: @Model.mascota.Dueno.Nombres
+            </div>
+
+
+            <div class="details">
+                <i class="fa-solid fa-dog"></i>
+                En esta sección se encuentran las visitas de la mascota de la Historia clinica
+                @Model.mascota.Historia.Id
+                <br />
+                @Model.mascota.Nombre
+                <br />
+                @Model.mascota.Historia.FechaInicial
+            </div>
+
+
+
+
+
+
+            <div class="volverbtn">
+                <a class="btn-new" asp-page="/Mascota/ListaMascota" asp-route-duenoId="">Volver</a>
+            </div>
+        </div>
+
+    </div>
 </div>
 
-<a class="btn  btn-primary table-btn" asp-page="/Mascota/ListaMascota" asp-route-duenoId="">volver</a>
-<a class="btn  btn-primary table-btn" asp-page="/VisitaPyP/AgregarVisita" asp-route-visitaId="">Agregar Visita</a>
+
+<div class="container1">
+    <div class="card">
+        <div class="titlecard">
+            <h1>Detalle Visita</h1>
+        </div>
+        <div>
+            @foreach (var visitas in Model.listaVisitaPyP)
+            {
+                <table>
+                    <tr>
+                        <td>El Id de la visita es @visitas.Id</td>
+                    </tr>
+                    <tr>
+                        <td>La fecha de la visita es @visitas.FechaVisita</td>
+                    </tr>
+                    <tr>
+                        <td>La temperatura del animal es :@visitas.Temperatura</td>
+                    </tr>
+                    <tr>
+                        <td>Peso :@visitas.Peso</td>
+                    </tr>
+                    <tr>
+                        <td>FrecuenciaRespiratoria : @visitas.FrecuenciaRespiratoria</td>
+                    </tr>
+                    <tr>
+                        <td>FrecuenciaCardiaca : @visitas.FrecuenciaCardiaca</td>
+                    </tr>
+                    <tr>
+                        <td>EstadoAnimo : @visitas.EstadoAnimo</td>
+                    </tr>
+                    <tr>
+                        <td>IdVeterinario @visitas.IdVeterinario </td>
+                    </tr>
+                    <tr>
+                        <td>Recomendaciones : @visitas.Recomendaciones</td>
+                    </tr>
+
+
+
+                </table>
+                <div class="volverbtn">
+                    <a class="btn-new" asp-page="/VisitaPyP/AgregarVisita" asp-route-visita="@visitas.Id">Editar</a>
+                </div>
+                <div class="volverbtn">
+                    <a class="btn-new" asp-page="/VisitaPyP/DeleteVisita" asp-route-visita="@visitas.Id">Borrar</a>
+                </div>
+            }
+
+        </div>
+    </div>
+</div>

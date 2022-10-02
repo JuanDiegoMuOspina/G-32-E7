@@ -2,6 +2,8 @@
 @model MascotaFeliz.App.Frontend.Pages.DeleteMascotaModel
 @{
 }
-<div>@Model.mensaje</div>
-<a class="btn  btn-primary table-btn" asp-page="/Mascota/ListaMascota"
-                    >@Model.Boton</a>
+
+<div class="p-inicio">
+    <H1 class="title">@Model.mensaje</H1>
+    <a class="btn-deldel" asp-page="/Mascota/ListaMascota">@Model.Boton</a>
+</div>

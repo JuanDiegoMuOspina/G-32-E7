@@ -1,57 +1,64 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - MascotaFeliz.App.Frontend</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="icon" href="~/Logdoc.ico">
+    <title>Mascota Feliz</title>
+    <link href="~/Archivo/Css/Estilos.css" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
 </head>
+
 <body>
     <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container">
-                <a class="navbar-brand" asp-area="" asp-page="/Index">MascotaFeliz.App.Frontend</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex flex-sm-row-reverse">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Duenos/listaDuenos">duenos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Veterinario/listaVeterinario">veterinarios</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-page="/Mascota/ListaMascota">Mascota</a>
-                        </li>
-                        
-                    </ul>
-                </div>
+        <div class="navbar">
+            <div class="logo">
+                <a asp-area="" asp-page="/Index">
+                    <img class="logo-img" src="~/Archivo/Imagenes/Logodef.png" alt="Imagenes Logo">
+                </a>
+
             </div>
-        </nav>
+            <div class="menu">
+                <input type="checkbox" id="check-menu">
+                <label id="label-check" for="check-menu"><i class="fa-solid fa-bars icon-menu"></i></label>
+                <nav>
+                    <ul>
+                        <li><a class="inicio" id="selected" asp-area="" asp-page="/Index">Inicio </a></li>
+                        <li><a href="#">Menu</a>
+                            <ul>
+                                <li><a asp-area="" asp-page="/Duenos/listaDuenos"> Dueño</a></li>
+                                <li><a asp-area="" asp-page="/Veterinario/listaVeterinario"> Veterinario</a></li>
+                                <li><a asp-area="" asp-page="/Mascota/ListaMascota"> Mascota</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+
     </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+
+    @RenderBody()
+
+    <div class="footer">
+        <div class="social">
+            <a href="https://instagram.com/"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+            <a href="https://www.whatsapp.com/"><i class="fab fa-whatsapp"></i></a>
+            <a href="https://github.com/JuanDiegoMuOspina/G-32-E7"><i class="fab fa-github"></i></a>
+        </div>
+        <ul class="listfoot">
+            <li><a asp-area="" asp-page="/Index">Inicio</a></li>
+            <li><a asp-area="" asp-page="/Privacy">Terminos</a></li>
+        </ul>
+        <p class="copry">
+            Sevensoft <i class="fa-sharp fa-solid fa-copyright"></i> 2022
+
+        </p>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2022 - MascotaFeliz.App.Frontend - <a asp-area="" asp-page="/Privacy">Privacy</a>
-        </div>
-    </footer>
-
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-
-    @RenderSection("Scripts", required: false)
 </body>
+
 </html>

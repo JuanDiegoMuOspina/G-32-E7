@@ -2,27 +2,40 @@
 @model MascotaFeliz.App.Frontend.Pages.ListaMascotaModel
 @{
 }
-<h1>Lista de las mascotas</h1>
-<table class="" >
-    @foreach (var mascota in Model.listaMascota)
-    {
-        <tr>
-            <td>@mascota.Nombre</td>
-            <td>@mascota.Color</td>
-            <td>@mascota.Especie</td>
-            
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\DetalleMascota" asp-route-mascotaId="@mascota.Id" >Detalle Mascota</a>
-            </td>
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\EditarMascota" asp-route-mascotaId="@mascota.Id">Editar  Mascota</a>
-            </td>
-            <td>
-                <a class="btn  btn-primary table-btn" asp-page=".\DeleteMascota" asp-route-mascotaId="@mascota.Id">Borrar  Mascota</a>
-            </td>
 
-        </tr>
-    
-    }
-</table>
-<a class="btn  btn-primary table-btn" asp-page=".\EditarMascota" >Editar  Mascota</a>
+<div class="table-container">
+    <a class="btn-new" asp-page=".\EditarMascota">Agregar Nueva Mascota</a>
+    <h1 class="heading">Lista Mascotas</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Color</th>
+                <th>Especie</th>
+                <th>Accion</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var mascota in Model.listaMascota)
+            {
+                <tr>
+                    <td data-label="Nombre">@mascota.Nombre</td>
+                    <td data-label="Color">@mascota.Color</td>
+                    <td data-label="Especie">@mascota.Especie</td>
+
+                    <td data-label-accion="Accion">
+                        <a class="btn" asp-page=".\DetalleMascota" asp-route-mascotaId="@mascota.Id">Detalle
+                        </a>
+                        <a class="btn" asp-page=".\EditarMascota" asp-route-mascotaId="@mascota.Id">Editar
+                        </a>
+                        <a class="btn-del" asp-page=".\DeleteMascota" asp-route-mascotaId="@mascota.Id">Borrar
+                        </a>
+                    </td>
+                </tr>
+
+            }
+    </table>
+    </tbody>
+
+</div>

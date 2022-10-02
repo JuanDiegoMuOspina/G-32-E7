@@ -3,62 +3,96 @@
 @{
     int MascotaId = Model.mascota.Id;
 }
-<h1>Edicion de Mascota @MascotaId</h1>
+@* <h1>Edicion de Mascota @MascotaId</h1>
 
-<form method="post">
+    <form method="post">
     <div>
-        <table>
-            <tr>
-                <td> <input type="hidden" asp-for="mascota.Id" /></td>
-                <td> <label asp-for="mascota.Nombre"></label>
-                    <input asp-for="mascota.Nombre">
-                </td>
-                <td> <label asp-for="mascota.Color"></label>
-                    <input asp-for="mascota.Color"></td>
-                <td> <label asp-for="mascota.Especie"></label>
-                    <input asp-for="mascota.Especie">
-                </td>
-                <td><label asp-for="mascota.Raza"></label>
-                    <input asp-for="mascota.Raza">
-                </td>
-                <td>
-                    <label asp-for="mascota.Veterinario"></label>
-                    
-                        
-                        <select name="veterinarioId">
-
-                           
-                            @foreach (var veterinario in Model.listaVeterinario)
-                            {
-                                <option name="veterinarioId" value="@veterinario.Id">@veterinario.Nombres @veterinario.Apellidos</option>
-
-                            }
-
-                        </select>
-                    </td>
-                <td>
-                    <label for="dueno">Dueño</label>
-                     <select id="dueno" asp-for="mascota.Dueno.Id" name = "duenoId">
-                     <option value="0">Seleccione un Dueño</option>
-                     @foreach (var dueno in Model.listaDuenos)
-                    {
-                         <option value="@dueno.Id"> @dueno.Nombres @dueno.Apellidos</option>
-                    }
-        </select>
-                </td>
-               
-            </tr>
-        </table>
+    <table>
+    <tr>
+    <td> <input type="hidden" asp-for="mascota.Id" /></td>
+    <td> <label asp-for="mascota.Nombre"></label>
+    <input asp-for="mascota.Nombre">
+    </td>
+    <td> <label asp-for="mascota.Color"></label>
+    <input asp-for="mascota.Color">
+    </td>
+    <td> <label asp-for="mascota.Especie"></label>
+    <input asp-for="mascota.Especie">
+    </td>
+    <td><label asp-for="mascota.Raza"></label>
+    <input asp-for="mascota.Raza">
+    </td>
+    <td>
+    <label asp-for="mascota.Veterinario"></label>
 
 
+    <select name="veterinarioId">
 
 
+    @foreach (var veterinario in Model.listaVeterinario)
+    {
+    <option name="veterinarioId" value="@veterinario.Id">@veterinario.Nombres @veterinario.Apellidos
+    </option>
 
+    }
 
+    </select>
+    </td>
+    <td>
+    <label for="dueno">Dueño</label>
+    <select id="dueno" asp-for="mascota.Dueno.Id" name="duenoId">
+    <option value="0">Seleccione un Dueño</option>
+    @foreach (var dueno in Model.listaDuenos)
+    {
+    <option value="@dueno.Id"> @dueno.Nombres @dueno.Apellidos</option>
+    }
+    </select>
+    </td>
 
+    </tr>
+    </table>
 
-        <button type="submit" class="btn  btn-primary table-btn" >Enviar formulario</button>
+    <button type="submit" class="btn btn-primary table-btn">Enviar formulario</button>
 
     </div>
 
-</form>
+    </form> *@
+
+
+<section class="form-group">
+    <figure class="form-fig">
+        <img class=" img-form" src="~/Archivo/Imagenes/pets.png" alt="Mascota">
+    </figure>
+    <div class="form-reg">
+        <h2 class="title-form">Bienvenido!</h2>
+        <p class="paragraph">Registar Mascota</p>
+
+        <form method="post" class="main-form">
+            <input type="hidden" asp-for="mascota.Id" />
+            <input type="text" placeholder="Ingresar Nombre" class="main-input" asp-for="mascota.Nombre">
+            <input type="text" placeholder="Ingresar Color" class="main-input" asp-for="mascota.Color">
+            <input type="text" placeholder="Ingresar Especie" class="main-input" asp-for="mascota.Especie">
+            <input type="text" placeholder="Ingresar Raza" class="main-input" asp-for="mascota.Raza">
+
+            <select name="veterinarioId" class="main-input">
+                <option value="0">Seleccione un Veterinario</option>
+                @foreach (var veterinario in Model.listaVeterinario)
+                {
+                    <option name="veterinarioId" value="@veterinario.Id">@veterinario.Nombres @veterinario.Apellidos
+                    </option>
+
+                }
+            </select>
+
+            <select id="dueno" class="main-input" asp-for="mascota.Dueno.Id" name="duenoId">
+                <option value="0">Seleccione un Dueño</option>
+                @foreach (var dueno in Model.listaDuenos)
+                {
+                    <option value="@dueno.Id"> @dueno.Nombres @dueno.Apellidos</option>
+                }
+            </select>
+
+            <button type="submit" class="main-input--send">Enviar Formulario</button>
+        </form>
+    </div>
+</section>

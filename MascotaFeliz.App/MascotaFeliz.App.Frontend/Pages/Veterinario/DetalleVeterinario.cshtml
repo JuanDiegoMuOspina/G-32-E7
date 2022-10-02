@@ -2,24 +2,68 @@
 @model MascotaFeliz.App.Frontend.Pages.DetalleVeterinarioModel
 @{
 }
-<h1>Detalle Veterinario</h1>
-<div>
+@* <h1>Detalle Veterinario</h1>
+    <div>
     Nombre: @Model.veterinario.Nombres
-</div>
-<div>
+    </div>
+    <div>
     Cedula: @Model.veterinario.Nombres
-</div>
-<div>
+    </div>
+    <div>
     Nombre: @Model.veterinario.Nombres
-</div>
-<div>
+    </div>
+    <div>
     Apellidos: @Model.veterinario.Apellidos
-</div>
-<div>
+    </div>
+    <div>
     Direccion: @Model.veterinario.Direccion
-</div>
-<div>
+    </div>
+    <div>
     Telefono: @Model.veterinario.Telefono
     </div>
 
-<a class="btn  btn-primary table-btn" asp-page="/Veterinario/listaVeterinario" asp-route-duenoId="" >volver</a>
+    <a class="btn btn-primary table-btn" asp-page="/Veterinario/listaVeterinario" asp-route-duenoId="">volver</a>
+
+
+
+    --- *@
+
+<div class="container1">
+    <div class="card">
+        <div class="titlecard">
+            <h1>Detalle @Model.veterinario.Nombres</h1>
+            @* <h2>@Model.dueno.Nombres</h2> *@
+        </div>
+        <div class="content">
+            <div class="details">
+                <i class="fa-solid fa-user-nurse"></i>
+                Nombre: @Model.veterinario.Nombres
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-user-nurse"></i>
+                Apellidos: @Model.veterinario.Apellidos
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-user-nurse"></i>
+                Direccion: @Model.veterinario.Direccion
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-user-nurse"></i>
+                Telefono: @Model.veterinario.Telefono
+            </div>
+
+            <div class="details">
+                <i class="fa-solid fa-user-nurse"></i>
+                Tarjeta Profesional: @Model.veterinario.TarjetaProfesional
+            </div>
+
+            <div class="volverbtn">
+                <a class="btn-new" asp-page="/Veterinario/listaVeterinario" asp-route-duenoId="">volver</a>
+            </div>
+        </div>
+
+    </div>
+</div>
