@@ -148,7 +148,14 @@
     <div class="card">
         <div class="titlecard">
             <h1>Detalle Visita</h1>
+
         </div>
+
+        <div class="volverbtn">
+            <a class="btn-new" asp-page="/VisitaPyP/AgregarVisita" asp-route-visita="">Crear Visita</a>
+        </div>
+
+
         <div>
             @foreach (var visitas in Model.listaVisitaPyP)
             {
